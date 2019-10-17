@@ -206,8 +206,20 @@ body {
   .logo {
     display: none;
   }
+  .menu {
+    top: 60px;
+  }
   .menu-button {
     height: 60px;
+  }
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu__link {
+    margin-bottom: 20px;
   }
 }
 
@@ -228,5 +240,12 @@ body {
   margin-bottom: 67px;
   font-size: 30px;
   font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    background-size: cover;
+    background-position: top left 10%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
