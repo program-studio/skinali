@@ -489,7 +489,7 @@ img {
 }
 
 .catalog-card {
-  min-width: 570px;
+  max-width: 570px;
   position: relative;
   -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
           box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
