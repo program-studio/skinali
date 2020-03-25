@@ -762,7 +762,7 @@ img {
 }
 
 .step__title {
-  font-size: 18px;
+  font-size: 118px;
 }
 
 .step:last-child:before {
@@ -792,7 +792,7 @@ img {
 }
 
 .steps {
-  background-color: #f1f1f1;
+  background-color: #ccf70c;
 }
 
 .steps-block {
