@@ -7,6 +7,7 @@
     <title>Skinali Factory</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 <body>
     
@@ -495,6 +496,47 @@
 </section>
 <!-- /.section steps -->
 
+<section class="section before">
+    <div class="container">
+        <h2 class="section-title section__title">
+            Before and after
+        </h2>
+        <!-- /.section-title section__title -->
+        <div class="before-slider-wrap">
+            <div class="before-slider">
+                <div class="before-slider__item">
+                    <div class="before-after">
+                        <img src="img/before-slider/image-1_b.jpg" alt="">
+                        <img src="img/before-slider/image-1_a.jpg" alt="">
+                    </div>
+                </div>
+                <div class="before-slider__item">
+                    <div class="before-after">
+                        <img src="img/before-slider/image-2_b.jpg" alt="">
+                        <img src="img/before-slider/image-2_a.jpg" alt="">
+                    </div>
+                </div>
+                <div class="before-slider__item">
+                    <div class="before-after">
+                        <img src="img/before-slider/image-3_b.jpg" alt="">
+                        <img src="img/before-slider/image-3_a.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="before-slider-arrows">
+                <button class="arrow arrow-left">
+                    <img src="img/before-slider/left-arrow.png" alt="">
+                </button>
+                <button class="arrow arrow-right">
+                    <img src="img/before-slider/right-arrow.png" alt="">
+                </button>
+            </div>
+        </div>
+        <!-- /.before-slider-wrap -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /.section before -->
 
 <section class="section reviews">
     <div class="container">
@@ -719,6 +761,28 @@
 
     <!-- connect with vidget Spikmi -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=1905"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+   
+    <script>
+        $(window).load(function () {
+            $(".before-after").twentytwenty({
+                before_label: 'Without Skinali', // Set a custom before label
+                after_label: 'With Skinali' // Set a custom after label
+            });
+            $('.before-slider').slick({
+                draggable: false,
+                dots: true,
+                dotsClass: 'before-slider__dots',
+                prevArrow: $('.arrow-left'),
+                nextArrow: $('.arrow-right')
+            });
+        });
+    </script>
      
 </body>
 </html>
