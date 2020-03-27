@@ -76,7 +76,14 @@
                     <div class="form__row">
                         <div class="form__group">
                             <label for="" class="form__label">Вид скла</label>
-                             <input type="text" class="input form__input">
+                             <input type="hidden" name="type">
+                             <div class="select form__select">
+                                 <div class="select_checked">With print</div>
+                                 <ul class="select__dropdown">
+                                     <li>With print</li>
+                                     <li>Without print</li>
+                                 </ul>
+                             </div>
                         </div>
                         <div class="form__group">
                             <label for="" class="form__label">Ширина, см</label>
@@ -780,6 +787,9 @@
                 dotsClass: 'before-slider__dots',
                 prevArrow: $('.arrow-left'),
                 nextArrow: $('.arrow-right')
+            });
+            $('.menu-button').on('click', function(){
+                $('.menu').toggleClass('menu_active');
             });
         });
     </script>

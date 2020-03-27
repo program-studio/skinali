@@ -49,10 +49,26 @@ img
 	height: 80px
 	padding-left: 30px
 	border: 1px solid #dddddd
-.checkbox
+input[type="checkbox"]
 	display: none
 	&:checked + label:before
 			background-color: $primary
+.select
+	height: 80px
+	width: 100%
+	border: 1px solid #dddddd
+	position: relative
+	&_checked
+		line-height: 80px
+		padding-left: 30px
+	&__dropdown
+		position: absolute
+		top: 80px
+		width: 100%
+		background-color: #fff
+		border: 1px solid #dddddd
+		margin: 0
+.checkbox
 	&-label
 		display: flex
 		align-items: center
