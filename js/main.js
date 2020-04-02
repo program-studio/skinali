@@ -10,6 +10,13 @@ $(window).load(function () {
 		prevArrow: $('.arrow-left'),
 		nextArrow: $('.arrow-right')
 	});
+	$('.reviews-slider').slick({
+		draggable: false,
+		dots: true,
+		dotsClass: 'reviews-slider__dots',
+		prevArrow: $('.arrow-left'),
+		nextArrow: $('.arrow-right')
+	});
 	$('.menu-button').on('click', function () {
 		$('.menu').toggleClass('menu_active');
 	});
