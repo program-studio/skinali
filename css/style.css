@@ -1618,46 +1618,18 @@ input[type="checkbox"]:checked + label:before {
   background-color: #f5f6f8;
 }
 
-.reviews-slider-wrap {
-  max-width: 350px;
-  margin: auto;
-  position: relative;
-}
-
-.reviews-slider__dots {
-  margin: auto;
+.reviews-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style: none;
-  padding: 0;
-  margin-top: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.reviews-slider__dots li {
-  width: 10px;
-  height: 10px;
-  background-color: #d1d1d1;
-  border-radius: 50%;
-  margin: 5px;
-}
-
-.reviews-slider__dots li:hover {
-  cursor: pointer;
-}
-
-.reviews-slider__dots li.slick-active {
-  background-color: #5b7fda;
-}
-
-.reviews-slider__dots button {
-  display: none;
+.reviews-slider-wrap {
+  margin: auto;
+  position: relative;
 }
 
 .reviews-slider__item {
@@ -1680,8 +1652,8 @@ input[type="checkbox"]:checked + label:before {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  margin: auto;
   margin-bottom: 3 0px;
+  margin: 5px;
 }
 
 .reviews-slider__text:after {
@@ -1694,6 +1666,47 @@ input[type="checkbox"]:checked + label:before {
   height: 10px;
   border: 10px solid Transparent;
   border-top: 10px solid #fff;
+}
+
+@media (max-width: 768px) {
+  .reviews-slider {
+    display: block;
+  }
+  .reviews-slider-wrap {
+    max-width: 350px;
+  }
+  .reviews-slider__dots {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  .reviews-slider__dots li {
+    width: 10px;
+    height: 10px;
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  .reviews-slider__dots li:hover {
+    cursor: pointer;
+  }
+  .reviews-slider__dots li.slick-active {
+    background-color: #5b7fda;
+  }
+  .reviews-slider__dots button {
+    display: none;
+  }
 }
 
 .factory-block {

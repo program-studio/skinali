@@ -1,32 +1,13 @@
 .reviews	
 	background-color: #f5f6f8
 	&-slider
-		
+		display: flex
+		justify-content: space-between
 		&-wrap
-			max-width: 350px
+		
 			margin: auto
 			position: relative
-		&__dots
-			margin: auto
-			display: flex
-			justify-content: center
-			align-items: center
-			list-style: none		
-			padding: 0
-			margin-top: 30px
-			li
-				width: 10px
-				height: 10px
-				background-color: #d1d1d1
-				border-radius: 50%
-				margin: 5px
-				&:hover
-					cursor: pointer
-				&.slick-active
-					background-color: #5b7fda
-			button
-				display: none
-		
+			
 		&__item
 			text-align: center
 			
@@ -44,8 +25,8 @@
 			padding: 20px
 			background-color: #fff
 			border-radius: 10px
-			margin: auto
 			margin-bottom: 3 0px
+			margin: 5px
 			&:after
 				content: ''
 				position: absolute
@@ -55,4 +36,30 @@
 				height: 10px
 				border: 10px solid Transparent
 				border-top: 10px solid #fff
-			
+@media (max-width: 768px)
+	.reviews	
+		&-slider
+			display: block
+			&-wrap
+				max-width: 350px
+			&__dots
+				margin: auto
+				display: flex
+				justify-content: center
+				align-items: center
+				list-style: none    
+				padding: 0
+				margin-top: 30px
+				margin-bottom: 60px
+				li
+					width: 10px
+					height: 10px
+					background-color: #d1d1d1
+					border-radius: 50%
+					margin: 5px
+					&:hover
+						cursor: pointer
+					&.slick-active
+						background-color: #5b7fda
+				button
+					display: none

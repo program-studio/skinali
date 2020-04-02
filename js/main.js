@@ -10,16 +10,25 @@ $(window).load(function () {
 		prevArrow: $('.arrow-left'),
 		nextArrow: $('.arrow-right')
 	});
+
+
+
+
+
+/*
 	$('.reviews-slider').slick({
+		
 		draggable: false,
 		dots: true,
 		dotsClass: 'reviews-slider__dots',
 		prevArrow: $('.arrow-left'),
 		nextArrow: $('.arrow-right')
 	});
+	*/
 	$('.menu-button').on('click', function () {
 		$('.menu').toggleClass('menu_active');
 	});
+	
 
 /* Select configuration */
 
@@ -51,4 +60,65 @@ $(window).load(function () {
 		}
 	});
 
+
+	$(window).ready(function () {
+		function checkWidth() {
+			var windowWidth = $('body').innerWidth(),
+				elem = $(".number-bullets"); // лучше сохранять объект в переменную, многократно чтобы не насиловать 
+			// страницу для поиска нужного элемента
+			if (windowWidth < 768) {
+				$('.reviews-slider').slick({
+					draggable: false,
+					dots: true,
+					dotsClass: 'reviews-slider__dots',
+					prevArrow: $('.arrow-left'),
+					nextArrow: $('.arrow-right')
+				});
+			} else {
+				$('.reviews-slider').slick('unslick');
+				sliderIsLive = false;
+			}
+		}
+		checkWidth(); // проверит при загрузке страницы
+
+		$(window).resize(function () {
+			checkWidth(); // проверит при изменении размера окна клиента
+		});
+
+	});
+
+	
 });
+
+
+
+
+
+
+/*
+$(document).ready(function () {
+	function checkWidth() {
+		var windowWidth = $('body').innerWidth(),
+			elem = $(".number-bullets"); // лучше сохранять объект в переменную, многократно чтобы не насиловать 
+		// страницу для поиска нужного элемента
+		if (windowWidth < 768) {
+			$('.reviews-slider').slick({
+				draggable: false,
+				dots: true,
+				dotsClass: 'reviews-slider__dots',
+				prevArrow: $('.arrow-left'),
+				nextArrow: $('.arrow-right')
+			});
+		} else {
+			$('.reviews-slider').slick('unslick');
+			sliderIsLive = false;
+		}
+	}
+
+	checkWidth(); // проверит при загрузке страницы
+
+	$(window).resize(function () {
+		checkWidth(); // проверит при изменении размера окна клиента
+	});
+});
+*/
