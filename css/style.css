@@ -2009,6 +2009,9 @@ input[type="checkbox"]:checked + label:before {
   .before-slider-wrap {
     max-width: 100%;
   }
+  .before-slider li {
+    margin: 20px;
+  }
   .arrow-left {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
