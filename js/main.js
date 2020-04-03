@@ -5,6 +5,7 @@ $(window).load(function () {
 	});
 	$('.before-slider').slick({
 		draggable: false,
+		swipe: false,
 		dots: true,
 		dotsClass: 'before-slider__dots',
 		prevArrow: $('.arrow-left'),
@@ -12,19 +13,6 @@ $(window).load(function () {
 	});
 
 
-
-
-
-/*
-	$('.reviews-slider').slick({
-		
-		draggable: false,
-		dots: true,
-		dotsClass: 'reviews-slider__dots',
-		prevArrow: $('.arrow-left'),
-		nextArrow: $('.arrow-right')
-	});
-	*/
 	$('.menu-button').on('click', function () {
 		$('.menu').toggleClass('menu_active');
 	});
@@ -60,12 +48,25 @@ $(window).load(function () {
 		}
 	});
 
-
+	$(window).resize(function () {
+		var windowWidth = $('body').innerWidth();
+		if (windowWidth < 768) {
+			$('.reviews-slider').slick({
+				draggable: false,
+				dots: true,
+				dotsClass: 'reviews-slider__dots',
+				prevArrow: $('.arrow-left'),
+				nextArrow: $('.arrow-right')
+			});
+			}
+			else {
+				$('.reviews-slider').slick('unslick');
+				sliderIsLive = false;
+			}
+	});
 	$(window).ready(function () {
 		function checkWidth() {
-			var windowWidth = $('body').innerWidth(),
-				elem = $(".number-bullets"); // лучше сохранять объект в переменную, многократно чтобы не насиловать 
-			// страницу для поиска нужного элемента
+			var windowWidth = $('body').innerWidth();
 			if (windowWidth < 768) {
 				$('.reviews-slider').slick({
 					draggable: false,
@@ -78,16 +79,14 @@ $(window).load(function () {
 				$('.reviews-slider').slick('unslick');
 				sliderIsLive = false;
 			}
-		}
-		checkWidth(); // проверит при загрузке страницы
-
-		$(window).resize(function () {
-			checkWidth(); // проверит при изменении размера окна клиента
-		});
-
+		}			
+		checkWidth();
 	});
 
+
 	
+
+
 });
 
 

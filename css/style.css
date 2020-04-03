@@ -2004,4 +2004,18 @@ input[type="checkbox"]:checked + label:before {
   height: 30px;
   opacity: 40%;
 }
+
+@media (max-width: 576px) {
+  .before-slider-wrap {
+    max-width: 100%;
+  }
+  .arrow-left {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .arrow-right {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
 /*# sourceMappingURL=style.css.map */
