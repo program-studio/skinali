@@ -5,7 +5,7 @@ $(window).load(function () {
 	});
 	$('.before-slider').slick({
 		draggable: false,
-		swipe: false,
+		swipe: true,
 		dots: true,
 		dotsClass: 'before-slider__dots',
 		prevArrow: $('.arrow-left'),
