@@ -16,6 +16,12 @@ $(window).load(function () {
 	$('.menu-button').on('click', function () {
 		$('.menu').toggleClass('menu_active');
 	});
+
+
+	$(window).mouseup(function () {
+		$('.menu').removeClass('menu_active');
+	});
+
 	
 
 /* Select configuration */
