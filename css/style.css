@@ -1220,6 +1220,9 @@ input[type="checkbox"]:checked + label:before {
         flex-basis: 100%;
     width: 100%;
   }
+  .form__select {
+    margin-bottom: 20px;
+  }
   .form__input {
     margin-bottom: 20px;
   }
